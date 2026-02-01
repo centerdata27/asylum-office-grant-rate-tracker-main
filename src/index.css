@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.primary-c {
+    @apply bg-[#666555]
+}
+
+.secondary-c {
+    @apply bg-[#f9f9f9]
+}
+
+.flex-c {
+    @apply flex flex-col
+}
+
+.flex-c-1 {
+    @apply flex flex-col flex-1
+}
+
+.nav-btn {
+   @apply text-[#E2F0F7] hover:border-[#E2F0F7] border-transparent border-2 px-3 py-2 rounded-xl
+}

@@ -1,0 +1,225 @@
+{
+  "granted": 24.373156706704233,
+  "adminClosed": 20.79086550343532,
+  "denied": 54.568072100571726,
+  "closedNacaraGrant": 0.17893332015224162,
+  "asylumTerminated": 0.08897236913647373,
+  "totalCases": 303465,
+  "yearResults": [
+    {
+      "fiscal_year": "2015",
+      "granted": 38.072220642593116,
+      "adminClosed": 16.093261302246233,
+      "denied": 45.621268126243955,
+      "closedNacaraGrant": 0.17059994313335228,
+      "asylumTerminated": 0.04264998578333807,
+      "totalCases": 7034,
+      "yearData": [
+        {
+          "office": "Houston, TX",
+          "granted": 19.112627986348123,
+          "adminClosed": 56.996587030716725,
+          "denied": 23.890784982935152,
+          "closedNacaraGrant": 0,
+          "asylumTerminated": 0,
+          "totalCases": 293
+        },
+        {
+          "office": "New York, NY",
+          "granted": 20.373831775700936,
+          "adminClosed": 7.538940809968847,
+          "denied": 71.90031152647975,
+          "closedNacaraGrant": 0,
+          "asylumTerminated": 0.1869158878504673,
+          "totalCases": 1605
+        },
+        {
+          "office": "Newark, NJ",
+          "granted": 38.9920424403183,
+          "adminClosed": 17.639257294429708,
+          "denied": 43.36870026525199,
+          "closedNacaraGrant": 0,
+          "asylumTerminated": 0,
+          "totalCases": 754
+        }
+      ]
+    },
+    {
+      "fiscal_year": "2016",
+      "granted": 36.26010286554005,
+      "adminClosed": 19.41086099792933,
+      "denied": 43.72453409925857,
+      "closedNacaraGrant": 0.5377062320486273,
+      "asylumTerminated": 0.06679580522343197,
+      "totalCases": 29942,
+      "yearData": [
+        {
+          "office": "Houston, TX",
+          "granted": 30.667593880389433,
+          "adminClosed": 34.42280945757997,
+          "denied": 34.63143254520167,
+          "closedNacaraGrant": 0.27816411682892905,
+          "asylumTerminated": 0,
+          "totalCases": 1438
+        },
+        {
+          "office": "New York, NY",
+          "granted": 14.657293497363796,
+          "adminClosed": 12.530755711775043,
+          "denied": 72.51318101933217,
+          "closedNacaraGrant": 0.12302284710017575,
+          "asylumTerminated": 0.17574692442882248,
+          "totalCases": 5690
+        },
+        {
+          "office": "Newark, NJ",
+          "granted": 35.93429158110883,
+          "adminClosed": 20.02053388090349,
+          "denied": 43.81416837782341,
+          "closedNacaraGrant": 0.23100616016427106,
+          "asylumTerminated": 0,
+          "totalCases": 3896
+        }
+      ]
+    },
+    {
+      "fiscal_year": "2017",
+      "granted": 25.510506615276284,
+      "adminClosed": 17.94463180521069,
+      "denied": 56.13905051328615,
+      "closedNacaraGrant": 0.2334803394730015,
+      "asylumTerminated": 0.17233072675388209,
+      "totalCases": 53966,
+      "yearData": [
+        {
+          "office": "Houston, TX",
+          "granted": 17.8425838820947,
+          "adminClosed": 21.38601442458451,
+          "denied": 60.708686108497965,
+          "closedNacaraGrant": 0.06271558482282848,
+          "asylumTerminated": 0,
+          "totalCases": 3189
+        },
+        {
+          "office": "New York, NY",
+          "granted": 10.110761101514074,
+          "adminClosed": 10.740778376181282,
+          "denied": 78.55908952342241,
+          "closedNacaraGrant": 0.0711309826237171,
+          "asylumTerminated": 0.5182400162585103,
+          "totalCases": 9841
+        },
+        {
+          "office": "Newark, NJ",
+          "granted": 18.216968625718074,
+          "adminClosed": 14.858594785682723,
+          "denied": 66.82501104728237,
+          "closedNacaraGrant": 0.07733097657976139,
+          "asylumTerminated": 0.02209456473707468,
+          "totalCases": 9052
+        }
+      ]
+    }
+  ],
+  "citizenshipResults": [
+    {
+      "citizenship": "MEXICO",
+      "granted": 9.133875280200934,
+      "adminClosed": 6.90104518324466,
+      "denied": 27.988359845518136,
+      "closedNacaraGrant": 27.988359845518136,
+      "asylumTerminated": 27.988359845518136,
+      "totalCases": 148108
+    },
+    {
+      "citizenship": "ROMANIA",
+      "granted": 16.23263888888889,
+      "adminClosed": 14.438657407407407,
+      "denied": 23.06134259259259,
+      "closedNacaraGrant": 23.06134259259259,
+      "asylumTerminated": 23.20601851851852,
+      "totalCases": 3456
+    },
+    {
+      "citizenship": "SYRIA",
+      "granted": 19.780659622158183,
+      "adminClosed": 4.634966378482228,
+      "denied": 25.192122958693563,
+      "closedNacaraGrant": 25.192122958693563,
+      "asylumTerminated": 25.200128081972462,
+      "totalCases": 12492
+    },
+    {
+      "citizenship": "CHINA, PEOPLE'S REPUBLIC OF",
+      "granted": 14.420901657523915,
+      "adminClosed": 5.393236829264687,
+      "denied": 26.70594845558989,
+      "closedNacaraGrant": 26.70594845558989,
+      "asylumTerminated": 26.773964602031615,
+      "totalCases": 135262
+    },
+    {
+      "citizenship": "IRAN",
+      "granted": 19.892183288409704,
+      "adminClosed": 5.638814016172507,
+      "denied": 24.80862533692722,
+      "closedNacaraGrant": 24.80862533692722,
+      "asylumTerminated": 24.851752021563343,
+      "totalCases": 9275
+    },
+    {
+      "citizenship": "HONDURAS",
+      "granted": 12.858470192355984,
+      "adminClosed": 7.819798101551906,
+      "denied": 26.43639194415147,
+      "closedNacaraGrant": 26.440158706242777,
+      "asylumTerminated": 26.44518105569785,
+      "totalCases": 79644
+    },
+    {
+      "citizenship": "RUSSIA",
+      "granted": 16.071688060062968,
+      "adminClosed": 4.916444659723904,
+      "denied": 26.330830709614915,
+      "closedNacaraGrant": 26.330830709614915,
+      "asylumTerminated": 26.350205860983287,
+      "totalCases": 20645
+    },
+    {
+      "citizenship": "UKRAINE",
+      "granted": 13.004384335290183,
+      "adminClosed": 6.643382626142529,
+      "denied": 26.77416957717173,
+      "closedNacaraGrant": 26.77416957717173,
+      "asylumTerminated": 26.80389388422382,
+      "totalCases": 13457
+    },
+    {
+      "citizenship": "INDONESIA",
+      "granted": 9.49456778460085,
+      "adminClosed": 4.936230514879546,
+      "denied": 28.483703353802554,
+      "closedNacaraGrant": 28.483703353802554,
+      "asylumTerminated": 28.601794992914503,
+      "totalCases": 4234
+    },
+    {
+      "citizenship": "VENEZUELA",
+      "granted": 12.439679833559685,
+      "adminClosed": 3.269088142090714,
+      "denied": 28.093545621791353,
+      "closedNacaraGrant": 28.093545621791353,
+      "asylumTerminated": 28.104140780766894,
+      "totalCases": 103821
+    },
+    {
+      "citizenship": "UGANDA",
+      "granted": 13.172645739910314,
+      "adminClosed": 2.242152466367713,
+      "denied": 28.195067264573993,
+      "closedNacaraGrant": 28.195067264573993,
+      "asylumTerminated": 28.195067264573993,
+      "totalCases": 5352
+    }
+  ]
+}
