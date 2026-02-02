@@ -19,7 +19,7 @@ You must inspect the code in `src/components/pages/DataVisualizations`, `src/dat
 
 ### Guidance
 
-Widely used applications use robust APIs to get data. It is your job to integrate the provided API into this application and ensure everything works properly after integration. 
+Widely used applications use robust APIs to get data. It is your job to integrate the provided API into this application and ensure everything works properly after integration... DONE
 
 > API LINK: https://hrf-asylum-be-b.herokuapp.com/cases
 
