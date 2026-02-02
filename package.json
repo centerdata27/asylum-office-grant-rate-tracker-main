@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@testing-library/react": "^16.0.1",
+    "@vitejs/plugin-react-swc": "^4.2.2",
     "axios": "^1.7.7",
     "capitalizr": "^1.0.3",
     "dotenv": "^16.4.7",
