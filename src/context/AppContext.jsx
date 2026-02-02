@@ -8,10 +8,23 @@ const AppContext = createContext({});
 const url = 'https://hrf-asylum-be-b.herokuapp.com/cases'
 
 /**
- * TODO: Ticket 2:
- * - Use axios to fetch the data
- * - Store the data
- * - Populate the graphs with the stored data
+ * Ticket 2 - API integration (class notes)
+ *
+ * What this file does:
+ * - Acts as the global data provider for the app (React Context).
+ * - Uses `axios` to fetch two endpoints from the backend API:
+ *     GET /fiscalSummary        --> fiscal year results used for time series and heatmap
+ *     GET /citizenshipSummary   --> citizenship results used for choropleth map
+ * - Merges the responses into a `graphData` object and exposes it to components.
+ * - Exposed helpers:
+ *     - `updateQuery()` triggers a reload of API data (used by the Update Query button)
+ *     - `clearQuery()` clears results
+ *     - `getYears()` returns the array of fiscal years for plotting x-axis values
+ *
+ * Talking points for class:
+ * - Explain Context: central place to keep app data and helper functions.
+ * - Show how components read `graphData` (Choropleth, HeatMap, ScatterPlot).
+ * - Demonstrate how the app falls back to `test_data.json` when API is not available.
  */
 const useAppContextProvider = () => {
   const [graphData, setGraphData] = useState(testData);
@@ -21,9 +34,11 @@ const useAppContextProvider = () => {
 
   const getFiscalData = async () => {
     try {
-      const res = await axios.get(`${url}/fiscalSummary`);
-      console.log('FiscalData... ', res);
-      return res.data;
+        // Ticket 2: API call for fiscal year summary
+        // This endpoint returns yearResults used by the time-series and heatmap.
+        const res = await axios.get(`${url}/fiscalSummary`);
+        console.log('FiscalData... ', res);
+        return res.data;
     } catch (err) {
       console.error('Error fetching fiscal data:', err);
       throw err;
@@ -32,9 +47,11 @@ const useAppContextProvider = () => {
   
   const getCitizenshipResults = async () => {
     try {
-      const res = await axios.get(`${url}/citizenshipSummary`);
-      console.log('CitizenshipResults.... ', res);
-      return res.data;
+        // Ticket 2: API call for citizenship summary
+        // This endpoint returns citizenshipResults used by the choropleth map.
+        const res = await axios.get(`${url}/citizenshipSummary`);
+        console.log('CitizenshipResults.... ', res);
+        return res.data;
     } catch (err) {
       console.error('Error fetching citizenship data:', err);
       throw err;
@@ -46,7 +63,7 @@ const useAppContextProvider = () => {
   };
 
   const fetchData = async () => {
-    // TODO: fetch all the required data and set it to the graphData state
+    // Ticket 2: Orchestrator that fetches both API endpoints and sets global graphData
     setIsDataLoading(true);
     try {
       const fiscalData = await getFiscalData();
@@ -60,6 +77,14 @@ const useAppContextProvider = () => {
       setIsDataLoading(false);
     }
   };
+
+  // Automatically fetch data on mount so the graphs populate without manual update
+  useEffect(() => {
+    fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Ticket 2: getYears helper — used by charts to render x-axis values
 
   const clearQuery = () => {
     setGraphData({});

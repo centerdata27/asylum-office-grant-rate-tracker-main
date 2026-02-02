@@ -7,6 +7,12 @@ import { useAuth0 } from '@auth0/auth0-react';
  * TODO: Ticket 3:
  * Implement authentication using Auth0
  */
+/*
+ * Notes for class - Header / Navigation
+ * - The header shows navigation links and the login/logout button.
+ * - The `Profile` link is only rendered when the user is authenticated.
+ * - This demonstrates conditional rendering based on auth state.
+ */
 export default function Header() {
   const { isAuthenticated } = useAuth0();
 
@@ -24,6 +30,7 @@ export default function Header() {
         <NavLink to='/graphs' className='nav-btn'>
           Graphs
         </NavLink>
+        {/* Ticket 3: Only show Profile link when authenticated */}
         {isAuthenticated && (
           <NavLink to='/profile' className='nav-btn'>
             Profile

@@ -13,6 +13,19 @@ import { NavLink } from 'react-router-dom'; // Navlink for quick access to the g
  * Implement structure and styles of the Landing page using Tailwind
  * Implement any button functionality implied by the landing page screenshot example (tickets/examples)
 */
+/*
+ * Notes for class (Ticket 1 - Landing Page)
+ * - This component implements the Landing Page UI.
+ * - Key sections: Hero header, three feature cards (bar/pie/line images),
+ *   call-to-action buttons (View the Data, Download the Data), information
+ *   section with an image and description, and the insights section.
+ * - Talking points:
+ *   1. Show how Tailwind classes are used for layout and styling.
+ *   2. Point out the `NavLink` to `/graphs` (navigates to data visualizations).
+ *   3. The `downloadCSV` method (from `useDownloadData`) provides an export
+ *      option for users to download the dataset used by the app.
+ *   4. The Back To Top button demonstrates a small DOM interaction (smooth scroll).
+ */
 export const LandingPage = () => {
   const navigate = useNavigate();
   const { downloadCSV } = useDownloadData();
@@ -28,6 +41,9 @@ export const LandingPage = () => {
     }, 10); // Adjust the interval time for smoothness
   };
 
+  // --- Ticket 1: Back-to-top helper ---
+  // This function implements a smooth scroll to the top when the Back To Top button is clicked.
+
   const handleReadMore = () => {
     // TODO: navigate to the humanrightsfirst.org homepage
   };
@@ -36,10 +52,12 @@ export const LandingPage = () => {
     <div className='flex-c w-[100vw] secondary-c'>
       {/* Landing Page
       <div>{'Type this into Canvas: ' + decodeBase64('VGltZTJDb2RlIQ==')}</div> */}
+      {/* Ticket 1: Hero header */}
       <div className="bg-[#666555] pt-4 pb-8">
         <h1 className="text-6xl mb-8 text-[#ffffff]">Asylum Office Grant Rate Tracker</h1>
         <h3 className="text-[#ffffff]">The Asylum Office Grant Rate Tracker provides asylum seekers, researchers, policymakers, and the public an interactive tool to explore USCIS data on Asylum Office decisions</h3>
       </div>
+      {/* Ticket 1: Feature cards (bar / pie / line) */}
       <div className="flex justify-center m-14 gap-20 text-2xl">
         <div>
           <img className="flex-c gap-3 h-[300px] w-[500px] m-[20px]" src={barGraph} alt="barGraph image"/>
@@ -54,8 +72,11 @@ export const LandingPage = () => {
         <h3>Search Grant Rates Over Time</h3>
        </div>
       </div>
+      {/* Ticket 1: Call-to-action buttons */}
       <div className="flex align-center mx-auto gap-8">
+        {/* Navigate to the graphs page which uses API/test data */}
         <NavLink className="bg-[#aaa] px-[10px] py-[5px] text-white text-md font-semibold" to="/graphs">View the Data</NavLink>
+        {/* Download uses the useDownloadData hook to export current graphData */}
         <button onClick={downloadCSV} className="bg-[#aaa] px-[10px] py-[5px] text-white text-md font-semibold">Download the Data</button>
       </div>
       <section className="middle-section flex">

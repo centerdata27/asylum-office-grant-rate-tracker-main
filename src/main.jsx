@@ -12,9 +12,21 @@ console.log('auth_domain... ', AUTH_DOMAIN);
 console.log('auth_client_id... ', AUTH_CLIENT_ID);
 
 /**
- * Auth0 integration
- * - If env vars are missing, render the app without Auth0 but show instructions.
- * - When configured, wrap the app with Auth0Provider and an init guard.
+ * Ticket 3 - Auth0 integration (class notes)
+ *
+ * What this file does:
+ * - Reads `VITE_AUTH_DOMAIN` and `VITE_AUTH_CLIENT_ID` from the local environment.
+ * - If values are present, wraps the app in `Auth0Provider` so all components can
+ *   use `useAuth0()` to inspect authentication state.
+ * - Uses `Auth0InitWrapper` to wait for the SDK to finish initializing before
+ *   rendering the app (prevents rendering while auth is still starting).
+ * - If env vars are missing, shows instructions so students can configure their
+ *   `.env.local` file.
+ *
+ * Talking points for class:
+ * - Show the difference between client-side config (Client ID) and secrets (never store Client Secret here).
+ * - Explain why `redirect_uri` must match the Allowed Callback URL in Auth0 dashboard.
+ * - Demonstrate how this provider makes `useAuth0()` available across the app.
  */
 const RootApp = () => {
   if (!AUTH_DOMAIN || !AUTH_CLIENT_ID) {
@@ -45,6 +57,7 @@ VITE_AUTH_CLIENT_ID=your-client-id</pre>
         redirect_uri: window.location.origin,
       }}
     >
+      {/* Ticket 3: Auth0 Provider - makes `useAuth0()` available to all components */}
       <Auth0InitWrapper>
         <ProvideAppContext>
           <App />
