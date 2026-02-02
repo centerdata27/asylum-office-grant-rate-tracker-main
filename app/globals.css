@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 98%;
+  --foreground: 0 0% 20%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 20%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 20%;
+  --primary: 60 7% 37%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 98%;
+  --secondary-foreground: 0 0% 20%;
+  --muted: 0 0% 93%;
+  --muted-foreground: 0 0% 45%;
+  --accent: 0 0% 93%;
+  --accent-foreground: 0 0% 20%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 85%;
+  --input: 0 0% 85%;
+  --ring: 60 7% 37%;
+  --radius: 0.5rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--foreground));
+}
+
+.primary-c {
+  @apply bg-[#666555];
+}
+
+.secondary-c {
+  @apply bg-[#f9f9f9];
+}
+
+.flex-c {
+  @apply flex flex-col;
+}
+
+.flex-c-1 {
+  @apply flex flex-col flex-1;
+}
+
+.nav-btn {
+  @apply text-[#E2F0F7] hover:border-[#E2F0F7] border-transparent border-2 px-3 py-2 rounded-xl;
+}
