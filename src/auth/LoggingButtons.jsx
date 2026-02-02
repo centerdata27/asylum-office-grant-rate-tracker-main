@@ -15,16 +15,13 @@ export const LoggingButtons = () => {
   const buttonText = isAuthenticated ? 'Log Out' : 'Log In';
 
   const handleLogging = () => {
-    console.log('handleLogging ran ')
     if (isAuthenticated) {
-      // TODO: Add Logout functionality here:
-      console.log('logout ran')
       logout({ 
-        returnTo: window.location.origin
+        logoutParams: {
+          returnTo: window.location.origin
+        }
       });
     } else {
-      // TODO: Add Redirect functionality here:
-      console.log('login ran')
       loginWithRedirect();
     }
   };
